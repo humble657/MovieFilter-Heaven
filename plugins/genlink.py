@@ -24,26 +24,26 @@ async def allowed(_, __, message):
 async def gen_link_s(bot, message):
     replied = message.reply_to_message
     if not replied:
-        return await message.reply('Reply to a message to get a shareable link.')
+        return await message.reply('𝑅𝑒𝑝𝑙𝑦 𝑡𝑜 𝑎 𝑚𝑒𝑠𝑠𝑎𝑔𝑒 𝑡𝑜 𝑔𝑒𝑡 𝑎 𝑠𝒉𝑎𝑟𝑒𝑎𝑏𝑙𝑒 𝑙𝑖𝑛𝑘.')
     file_type = replied.media
     if file_type not in ["video", 'audio', 'document']:
-        return await message.reply("Reply to a supported media")
+        return await message.reply("𝑅𝑒𝑝𝑙𝑦 𝑡𝑜 𝑎 𝑠𝑢𝑝𝑝𝑜𝑟𝑡𝑒𝑑 𝑚𝑒𝑑𝑖𝑎")
     if message.has_protected_content and message.chat.id not in ADMINS:
-        return await message.reply("okDa")
+        return await message.reply("ⁿᵒᵗ ᶠᵒʳ ʸᵒᵘ")
     file_id, ref = unpack_new_file_id((getattr(replied, file_type)).file_id)
     string = 'filep_' if message.text.lower().strip() == "/plink" else 'file_'
     string += file_id
     outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
-    await message.reply(f"Here is your Link:\nhttps://t.me/{temp.U_NAME}?start={outstr}")
+    await message.reply(f"𝐻𝑒𝑟𝑒 𝑖𝑠 𝑦𝑜𝑢𝑟 𝐿𝑖𝑛𝑘:\nhttps://t.me/{temp.U_NAME}?start={outstr}")
     
     
 @Client.on_message(filters.command(['batch', 'pbatch']) & filters.create(allowed))
 async def gen_link_batch(bot, message):
     if " " not in message.text:
-        return await message.reply("Use correct format.\nExample <code>/batch https://t.me/TeamEvamaria/10 https://t.me/TeamEvamaria/20</code>.")
+        return await message.reply("𝑈𝑠𝑒 𝑡𝒉𝑒 𝐶𝑜𝑟𝑟𝑒𝑐𝑡 𝐹𝑜𝑟𝑚𝑎𝑡.\nExample <code>/batch https://t.me/RestinHeaven/1 https://t.me/RestinHeaven/20</code>.")
     links = message.text.strip().split(" ")
     if len(links) != 3:
-        return await message.reply("Use correct format.\nExample <code>/batch https://t.me/TeamEvamaria/10 https://t.me/TeamEvamaria/20</code>.")
+        return await message.reply("𝑈𝑠𝑒 𝑡𝒉𝑒 𝐶𝑜𝑟𝑟𝑒𝑐𝑡 𝐹𝑜𝑟𝑚𝑎𝑡.\nExample <code>/batch https://t.me/RestinHeaven/1 https://t.me/RestinHeaven/20</code>.")
     cmd, first, last = links
     regex = re.compile("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")
     match = regex.match(first)
