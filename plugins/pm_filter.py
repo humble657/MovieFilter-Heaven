@@ -41,14 +41,14 @@ async def give_filter(client, message):
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("oKda", show_alert=True)
+        return await query.answer("ⁿᵒ", show_alert=True)
     try:
         offset = int(offset)
     except:
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("You are using one of my old messages, please send the request again.", show_alert=True)
+        await query.answer("𝑌𝑜𝑢 𝑎𝑟𝑒 𝑐𝑙𝑖𝑐𝑘𝑖𝑛𝑔 𝑜𝑛 𝑎𝑛 𝑜𝑙𝑑 𝑏𝑢𝑡𝑡𝑜𝑛 𝑤𝒉𝑖𝑐𝒉 𝑖𝑠 𝑒𝑥𝑝𝑖𝑟𝑒𝑑.🥸", show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -120,14 +120,14 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("okDa", show_alert=True)
+        return await query.answer("ⁿᵒ", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
     if not movies:
-        return await query.answer("You are clicking on an old button which is expired.", show_alert=True)
+        return await query.answer("𝑌𝑜𝑢 𝑎𝑟𝑒 𝑐𝑙𝑖𝑐𝑘𝑖𝑛𝑔 𝑜𝑛 𝑎𝑛 𝑜𝑙𝑑 𝑏𝑢𝑡𝑡𝑜𝑛 𝑤𝒉𝑖𝑐𝒉 𝑖𝑠 𝑒𝑥𝑝𝑖𝑟𝑒𝑑.🥸", show_alert=True)
     movie = movies[(int(movie_))]
-    await query.answer('Checking for Movie in database...')
+    await query.answer('𝐶𝒉𝑒𝑐𝑘𝑖𝑛𝑔 𝑌𝑜𝑢𝑟 𝑅𝑒𝑞𝑢𝑒𝑠𝑡 𝑀𝑜𝑣𝑖𝑒 𝑖𝑛 𝑀𝑦 𝑑𝑎𝑡𝑎𝑏𝑎𝑠𝑒🐾..')
     k = await manual_filters(bot, query.message, text=movie)
     if k == False:
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
+            k = await query.message.edit('𝑇𝒉𝑖𝑠 𝑀𝑜𝑣𝑖𝑒 𝑁𝑜𝑡 𝐹𝑜𝑢𝑛𝑑 𝐼𝑛 𝐷𝑎𝑡𝑎𝐵𝑎𝑠𝑒, 𝐴𝑠𝑘 𝐴𝑑𝑚𝑖𝑛 𝑇𝑜 𝑎𝑑𝑑😇')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -156,11 +156,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat = await client.get_chat(grpid)
                     title = chat.title
                 except:
-                    await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
+                    await query.message.edit_text("𝐼'𝑚 𝑛𝑜𝑡 𝑐𝑜𝑛𝑛𝑒𝑐𝑡𝑒𝑑 𝑡𝑜 𝑎𝑛𝑦 𝑔𝑟𝑜𝑢𝑝𝑠!!", quote=True)
                     return await query.answer('Piracy Is Crime')
             else:
                 await query.message.edit_text(
-                    "I'm not connected to any groups!\nCheck /connections or connect to any groups",
+                    "𝐼'𝑚 𝑛𝑜𝑡 𝑐𝑜𝑛𝑛𝑒𝑐𝑡𝑒𝑑 𝑡𝑜 𝑎𝑛𝑦 𝑔𝑟𝑜𝑢𝑝𝑠!\n𝐶𝒉𝑒𝑐𝑘 /connections 𝑜𝑟 𝑐𝑜𝑛𝑛𝑒𝑐𝑡 𝑡𝑜 𝑎𝑛𝑦 𝑔𝑟𝑜𝑢𝑝𝑠",
                     quote=True
                 )
                 return await query.answer('Piracy Is Crime')
@@ -176,7 +176,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if (st.status == "creator") or (str(userid) in ADMINS):
             await del_all(query.message, grp_id, title)
         else:
-            await query.answer("You need to be Group Owner or an Auth User to do that!", show_alert=True)
+            await query.answer("𝑌𝑜𝑢 𝑛𝑒𝑒𝑑 𝑡𝑜 𝑏𝑒 𝐺𝑟𝑜𝑢𝑝 𝑂𝑤𝑛𝑒𝑟 𝑜𝑟 𝑎𝑛 𝐴𝑢𝑡𝒉 𝑈𝑠𝑒𝑟 𝑡𝑜 𝑑𝑜 𝑡𝒉𝑎𝑡! 😇", show_alert=True)
     elif query.data == "delallcancel":
         userid = query.from_user.id
         chat_type = query.message.chat.type
@@ -195,7 +195,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("That's not for you!!", show_alert=True)
+                await query.answer("𝐻𝑒𝑦 𝐵𝑟𝑜 ! 𝑇𝒉𝑎𝑡'𝑠 𝑛𝑜𝑡 𝑓𝑜𝑟 𝑦𝑜𝑢!!", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -220,7 +220,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ])
 
         await query.message.edit_text(
-            f"Group Name : **{title}**\nGroup ID : `{group_id}`",
+            f"𝐺𝑟𝑜𝑢𝑝 𝑁𝑎𝑚𝑒 : **{title}**\n𝐺𝑟𝑜𝑢𝑝 𝐼𝐷 : `{group_id}`",
             reply_markup=keyboard,
             parse_mode="md"
         )
@@ -240,11 +240,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if mkact:
             await query.message.edit_text(
-                f"Connected to **{title}**",
+                f"𝐶𝑜𝑛𝑛𝑒𝑐𝑡𝑒𝑑 𝑡𝑜 **{title}**",
                 parse_mode="md"
             )
         else:
-            await query.message.edit_text('Some error occurred!!', parse_mode="md")
+            await query.message.edit_text('𝑆𝑜𝑚𝑒 𝑒𝑟𝑟𝑜𝑟 𝑜𝑐𝑐𝑢𝑟𝑟𝑒𝑑!! 📍', parse_mode="md")
         return await query.answer('Piracy Is Crime')
     elif "disconnect" in query.data:
         await query.answer()
@@ -260,12 +260,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if mkinact:
             await query.message.edit_text(
-                f"Disconnected from **{title}**",
+                f"𝐷𝑖𝑠𝑐𝑜𝑛𝑛𝑒𝑐𝑡𝑒𝑑 𝑓𝑟𝑜𝑚 🐾 **{title}**",
                 parse_mode="md"
             )
         else:
             await query.message.edit_text(
-                f"Some error occurred!!",
+                f"𝑆𝑜𝑚𝑒 𝑒𝑟𝑟𝑜𝑟 𝑜𝑐𝑐𝑢𝑟𝑟𝑒𝑑!! 📍",
                 parse_mode="md"
             )
         return await query.answer('Piracy Is Crime')
@@ -279,11 +279,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if delcon:
             await query.message.edit_text(
-                "Successfully deleted connection"
+                "𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙𝑙𝑦 𝑑𝑒𝑙𝑒𝑡𝑒𝑑 𝑐𝑜𝑛𝑛𝑒𝑐𝑡𝑖𝑜𝑛 ✅"
             )
         else:
             await query.message.edit_text(
-                f"Some error occurred!!",
+                f"𝑆𝑜𝑚𝑒 𝑒𝑟𝑟𝑜𝑟 𝑜𝑐𝑐𝑢𝑟𝑟𝑒𝑑!! 📍",
                 parse_mode="md"
             )
         return await query.answer('Piracy Is Crime')
@@ -295,7 +295,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         groupids = await all_connections(str(userid))
         if groupids is None:
             await query.message.edit_text(
-                "There are no active connections!! Connect to some groups first.",
+                "𝑇𝒉𝑒𝑟𝑒 𝑎𝑟𝑒 𝑛𝑜 𝑎𝑐𝑡𝑖𝑣𝑒 𝑐𝑜𝑛𝑛𝑒𝑐𝑡𝑖𝑜𝑛𝑠!! 𝐶𝑜𝑛𝑛𝑒𝑐𝑡 𝑡𝑜 𝑠𝑜𝑚𝑒 𝑔𝑟𝑜𝑢𝑝𝑠 𝑓𝑖𝑟𝑠𝑡.😅",
             )
             return await query.answer('Piracy Is Crime')
         buttons = []
@@ -333,7 +333,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
         if not files_:
-            return await query.answer('No such file exist.')
+            return await query.answer('𝑁𝑜 𝑠𝑢𝑐𝒉 𝑓𝑖𝑙𝑒 𝑒𝑥𝑖𝑠𝑡. 𝐼𝑛 𝑀𝑦 𝐷𝑎𝑡𝑎𝑏𝑎𝑠𝑒 😩 , 𝐴𝑠𝑘 𝐴𝑑𝑚𝑖𝑛 𝑇𝑜 𝐴𝑑𝑑 💫')
         files = files_[0]
         title = files.file_name
         size = get_size(files.file_size)
@@ -364,7 +364,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('Check PM, I have sent files in pm', show_alert=True)
+                await query.answer('𝐶𝒉𝑒𝑐𝑘 𝑃𝑀, 𝐼 𝒉𝑎𝑣𝑒 𝑠𝑒𝑛𝑡 𝑌𝑜𝑢 🥸', show_alert=True)
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn !', show_alert=True)
         except PeerIdInvalid:
@@ -373,12 +373,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒", show_alert=True)
+            await query.answer("𝐼 𝐿𝑖𝑘𝑒 𝑌𝑜𝑢𝑟 𝑆𝑚𝑎𝑟𝑡𝑛𝑒𝑠𝑠, 𝐵𝑢𝑡 𝐷𝑜𝑛'𝑡 𝐵𝑒 𝑂𝑣𝑒𝑟𝑠𝑚𝑎𝑟𝑡 😒", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
         if not files_:
-            return await query.answer('No such file exist.')
+            return await query.answer('𝑁𝑜 𝑠𝑢𝑐𝒉 𝑓𝑖𝑙𝑒 𝑒𝑥𝑖𝑠𝑡. 𝐼𝑛 𝑀𝑦 𝐷𝑎𝑡𝑎𝑏𝑎𝑠𝑒 😩 , 𝐴𝑠𝑘 𝐴𝑑𝑚𝑖𝑛 𝑇𝑜 𝐴𝑑𝑑 💫')
         files = files_[0]
         title = files.file_name
         size = get_size(files.file_size)
@@ -407,7 +407,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/RestinHeaven')
+        ], [
+            InlineKeyboardButton('❤️‍🔥 Movies Group ❤️‍🔥', url='https://t.me/+0DO73KO0fclkYzVl'),
+            InlineKeyboardButton('❤️‍🔥 Movies Channel ❤️‍🔥',url='https://t.me/VipMoviez')
         ], [
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
@@ -438,7 +441,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria'),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/RestinHeaven'),
             InlineKeyboardButton('♥️ Source', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
@@ -525,7 +528,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "stats":
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='help'),
-            InlineKeyboardButton('♻️', callback_data='rfrsh')
+            InlineKeyboardButton(' Refresh ♻️', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
@@ -541,10 +544,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "rfrsh":
-        await query.answer("Fetching MongoDb DataBase")
+        await query.answer("𝐹𝑒𝑡𝑐𝒉𝑖𝑛𝑔 𝐷𝑒𝑡𝑎𝑖𝑙𝑠 𝑖𝑛 𝑀𝑜𝑛𝑔𝑜𝐷𝑏 𝐷𝑎𝑡𝑎𝐵𝑎𝑠𝑒 ⌛")
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='help'),
-            InlineKeyboardButton('♻️', callback_data='rfrsh')
+            InlineKeyboardButton(' Refresh ♻️', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
@@ -564,7 +567,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         grpid = await active_connection(str(query.from_user.id))
 
         if str(grp_id) != str(grpid):
-            await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
+            await query.message.edit("𝑌𝑜𝑢𝑟 𝐴𝑐𝑡𝑖𝑣𝑒 𝐶𝑜𝑛𝑛𝑒𝑐𝑡𝑖𝑜𝑛 𝐻𝑎𝑠 𝐵𝑒𝑒𝑛 𝐶𝒉𝑎𝑛𝑔𝑒𝑑. 𝐺𝑜 𝑇𝑜 /settings.")
             return await query.answer('Piracy Is Crime')
 
         if status == "True":
@@ -708,7 +711,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search}"
+        cap = f"𝐻𝑒𝑟𝑒 𝑖𝑠 𝑤𝒉𝑎𝑡 𝑖 𝑓𝑜𝑢𝑛𝑑 𝑓𝑜𝑟 𝑦𝑜𝑢𝑟 𝑞𝑢𝑒𝑟𝑦, 𝐼𝑛 𝑀𝑦 𝐷𝑎𝑡𝑎𝑏𝑎𝑠𝑒 🪀 {search}"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -735,7 +738,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("𝐼 𝑐𝑜𝑢𝑙𝑑𝑛'𝑡 𝑓𝑖𝑛𝑑 𝑎𝑛𝑦 𝑉𝑖𝑑𝑒𝑜 𝑜𝑟 𝑀𝑜𝑣𝑖𝑒𝑠 𝑖𝑛 𝑡𝒉𝑎𝑡 𝑛𝑎𝑚𝑒. 𝐴𝑠𝑘 𝐴𝑑𝑚𝑖𝑛 𝑇𝑜 𝐴𝑑𝑑 😇")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -764,7 +767,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
+        k = await msg.reply("𝐼 𝑐𝑜𝑢𝑙𝑑𝑛'𝑡 𝑓𝑖𝑛𝑑 𝑎𝑛𝑦𝑡𝒉𝑖𝑛𝑔 𝑟𝑒𝑙𝑎𝑡𝑒𝑑 𝑡𝑜 𝑡𝒉𝑎𝑡. 𝐶𝒉𝑒𝑐𝑘 𝑦𝑜𝑢𝑟 𝑠𝑝𝑒𝑙𝑙𝑖𝑛𝑔")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -776,7 +779,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+    await msg.reply("𝐼 𝑐𝑜𝑢𝑙𝑑𝑛'𝑡 𝑓𝑖𝑛𝑑 𝑎𝑛𝑦𝑡𝒉𝑖𝑛𝑔 𝑟𝑒𝑙𝑎𝑡𝑒𝑑 𝑡𝑜 𝑡𝒉𝑎𝑡\n𝐷𝑖𝑑 𝑦𝑜𝑢 𝑚𝑒𝑎𝑛 𝑎𝑛𝑦 𝑜𝑛𝑒 𝑜𝑓 𝑡𝒉𝑒𝑠𝑒?",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 
