@@ -1,18 +1,32 @@
 class script(object):
-    START_TXT = """𝙷𝙴𝙻𝙾 {},
-𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂, 𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙴𝙽𝙹𝙾𝚈 😍"""
-    HELP_TXT = """𝙷𝙴𝚈 {}
-𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
-    ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/TeamEvamaria>Team Eva Maria</a>
-✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
-✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
-✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙷𝙴𝚁𝙾𝙺𝚄
-✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
+    START_TXT = """𝐻𝑒𝑦 𝐵𝑢𝑑𝑑𝑦{},
+I Am <a href=https://t.me/{}>{}</a>,
+
+𝑰 𝑯𝒂𝒗𝒆 𝑻𝒐𝒏𝒔 𝒐𝒇 𝑴𝒐𝒗𝒊𝒆𝒔 & 𝑽𝒊𝒅𝒆𝒐𝒔 𝒊𝒏 𝑴𝒚 𝑫𝒂𝒕𝒂𝑩𝒂𝒔𝒆 ᴛᴏ ᴄʜᴇᴄᴋ ᴍʏ sᴛᴀᴛᴜs /stats
+🔸𝐼 𝐶𝑎𝑛 𝑃𝑟𝑜𝑣𝑖𝑑𝑒 𝑀𝑜𝑣𝑖𝑒𝑠 𝐼𝑛 𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 𝐺𝑟𝑜𝑢𝑝𝑠. 
+🔸𝑌𝑜𝑢 𝐶𝑎𝑛 𝑆𝑒𝑎𝑟𝑐𝒉 𝑀𝑜𝑣𝑖𝑒𝑠 𝑉𝑖𝑎 𝐼𝑛𝑙𝑖𝑛𝑒. 
+🔸𝐼 𝐶𝑎𝑛 𝐴𝑙𝑠𝑜 𝐴𝑑𝑑 𝐹𝑖𝑙𝑡𝑒𝑟𝑠 𝐼𝑛 𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 𝐺𝑟𝑜𝑢𝑝𝑠.
+🔸𝐽𝑢𝑠𝑡 𝐴𝑑𝑑 𝑀𝑒 𝑇𝑜 𝑌𝑜𝑢𝑟 𝐺𝑟𝑜𝑢𝑝 𝐴𝑛𝑑 𝐸𝑛𝑗𝑜𝑦 𝑂𝑓 𝐴𝑙𝑙 𝐴𝑣𝑎𝑖𝑙𝑎𝑏𝑙𝑒 𝑀𝑜𝑣𝑖𝑒𝑠 𝑂𝑛 𝑇𝐺.
+🔰𝑌𝑜𝑢 𝐶𝑎𝑛 𝑈𝑠𝑒 𝑀𝑒 𝑎𝑠 𝐴𝑢𝑡𝑜 𝐹𝑖𝑙𝑡𝑒𝑟 𝐹𝑜𝑟 𝑌𝑜𝑢𝑟 𝐺𝑟𝑜𝑢𝑝 
+
+𝑀𝑎𝑑𝑒 𝑊𝑖𝑡𝒉 ❤️
+
+𝐽𝑢𝑠𝑡 𝐴𝑑𝑑 𝑀𝑒 𝑡𝑜 𝑌𝑜𝑢𝑟 𝐺𝑟𝑜𝑢𝑝 𝐴𝑛𝑑 𝐸𝑛𝑗𝑜𝑦 😇
+
+𝐹𝑜𝑟 𝑀𝑜𝑟𝑒 𝑖𝑛𝑓𝑜 𝐶𝑙𝑖𝑐𝑘 𝐻𝑒𝑙𝑝!"""
+    HELP_TXT = """𝐻𝑒𝑦 𝐵𝑢𝑑𝑑𝑦{}
+𝐼 𝑐𝑎𝑛  𝑃𝑟𝑜𝑣𝑖𝑑𝑒 𝑀𝑜𝑣𝑖𝑒 𝑡𝑜 𝑌𝑜𝑢𝑟 𝐺𝑟𝑜𝑢𝑝"""
+    ABOUT_TXT = """ ABOUT ME
+✯ 𝑀𝑦 𝑁𝑎𝑚𝑒: {}
+✯ 𝐶𝑟𝑒𝑎𝑡𝑜𝑟: <a href=https://t.me/RestinHeaven>𝚁𝚎𝚜𝚝𝚒𝚗𝙷𝚎𝚊𝚟𝚎𝚗</a>
+✯ 𝑙𝑖𝑏𝑟𝑎𝑟𝑦: <a href=https://t.me/RestinHeaven>𝚁𝚎𝚜𝚝𝚒𝚗𝙷𝚎𝚊𝚟𝚎𝚗</a>
+✯ 𝐿𝑎𝑛𝑔𝑢𝑎𝑔𝑒: <a href=https://www.python.org/>𝒑𝒚𝒕𝒉𝒐𝒏</a>
+✯ 𝐷𝑎𝑡𝑎𝑏𝑎𝑠𝑒: <a href=https://www.mongodb.com/>𝑴𝒐𝒏𝒈𝒐 𝑫𝑩</a>
+✯ 𝑆𝑒𝑟𝑣𝑒𝑟: <a href=https://www.heroku.com/>𝑯𝒆𝒓𝒐𝒌𝒖</a>
+✯ 𝐵𝑢𝑙𝑡 𝑆𝑡𝑎𝑡𝑢𝑠: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
     SOURCE_TXT = """<b>NOTE:</b>
-- Eva Maria is a open source project. 
-- Source - https://github.com/EvamariaTG/EvaMaria  
+- 𝚁𝚎𝚜𝚝𝚒𝚗𝙷𝚎𝚊𝚟𝚎𝚗
+- Source - https://t.me/RestinHeaven  
 
 <b>DEVS:</b>
 - <a href=https://t.me/TeamEvamaria>Team Eva Maria</a>"""
