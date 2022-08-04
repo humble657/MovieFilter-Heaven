@@ -50,8 +50,8 @@ async def start(client, message):
             InlineKeyboardButton('❤️‍🔥 Movies Group ❤️‍🔥', url='https://t.me/+0DO73KO0fclkYzVl'),
             InlineKeyboardButton('❤️‍🔥 Movies Channel ❤️‍🔥',url='https://t.me/VipMoviez')
             ],[
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('🛐 Help', callback_data='help'),
+            InlineKeyboardButton('🫠 About', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -94,13 +94,13 @@ async def start(client, message):
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/RestinHeaven')
             ],[
              InlineKeyboardButton('❤️‍🔥 Movies Group ❤️‍🔥', url='https://t.me/+0DO73KO0fclkYzVl'),
             InlineKeyboardButton('❤️‍🔥 Movies Channel ❤️‍🔥',url='https://t.me/VipMoviez')
             ],[
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('🛐 Help', callback_data='help'),
+            InlineKeyboardButton('🫠 About', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -233,7 +233,7 @@ async def start(client, message):
             return
         except:
             pass
-        return await message.reply('No such file exist.')
+        return await message.reply('No such file exist.In My Database')
     files = files_[0]
     title = files.file_name
     size=get_size(files.file_size)
