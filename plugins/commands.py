@@ -47,8 +47,7 @@ async def start(client, message):
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
             InlineKeyboardButton('🤖 Updates', url='https://t.me/RestinHeaven')
             ],[
-            InlineKeyboardButton('❤️‍🔥 Movies Group ❤️‍🔥', url='https://t.me/+0DO73KO0fclkYzVl'),
-            InlineKeyboardButton('❤️‍🔥 Movies Channel ❤️‍🔥',url='https://t.me/VipMoviez')
+            InlineKeyboardButton('❤️‍🔥 Update Group ❤️‍🔥', url='https://t.me/AdultsHeaven')
             ],[
             InlineKeyboardButton('🛐 Help', callback_data='help'),
             InlineKeyboardButton('🫠 About', callback_data='about')
@@ -96,8 +95,7 @@ async def start(client, message):
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
             InlineKeyboardButton('🤖 Updates', url='https://t.me/RestinHeaven')
             ],[
-             InlineKeyboardButton('❤️‍🔥 Movies Group ❤️‍🔥', url='https://t.me/+0DO73KO0fclkYzVl'),
-            InlineKeyboardButton('❤️‍🔥 Movies Channel ❤️‍🔥',url='https://t.me/VipMoviez')
+            InlineKeyboardButton('❤️‍🔥 Update Group ❤️‍🔥', url='https://t.me/AdultsHeaven')
             ],[
             InlineKeyboardButton('🛐 Help', callback_data='help'),
             InlineKeyboardButton('🫠 About', callback_data='about')
